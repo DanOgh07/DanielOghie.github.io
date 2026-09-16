@@ -1,0 +1,32 @@
+<div id="main">
+    <div class="inner">
+        <h1>Upora Data Engineering Pipeline</h1>
+
+        <span class="image main"><img src="images/upora_pipeline_architecture.png" alt="" /></span>
+
+        <p><strong>Role:</strong> Data Engineer — designed and built the full pipeline</p>
+
+        <h3>Context</h3>
+        <p>Upora is a career-intelligence product for Nigerians targeting UK/US/Africa job markets, offering skill-gap analysis between current and target roles with course recommendations. It needed a reliable, low-cost pipeline to ingest and unify job and course data at scale.</p>
+
+        <h3>Approach</h3>
+        <ul>
+            <li>Designed the pipeline around Medallion architecture (Bronze → Silver → Gold), separating raw ingestion, cleaning/unification, and aggregation</li>
+            <li>Built extract/transform logic across four job sources (Reed, Muse, Ashby, Greenhouse) and one course source (Coursera), including concurrent-worker scraping for course difficulty/duration enrichment</li>
+            <li>Migrated the full pipeline off AWS to a self-managed VPS — cron scheduling, self-managed PostgreSQL, local disk storage — cutting infrastructure cost with a documented risk trade-off</li>
+            <li>Diagnosed and fixed subtle data-integrity bugs, including a timestamp field that was silently overwriting on every run instead of only on real changes</li>
+        </ul>
+
+        <h3>Tech Stack</h3>
+        <p><code>Python</code> · <code>PostgreSQL</code> · <code>Cron</code> · <code>Sentence-Transformers</code> · <code>Linux/VPS</code></p>
+
+        <h3>Outcome</h3>
+        <p>Fully cost-optimised, self-hosted pipeline replacing a cloud-dependent architecture, with stronger data integrity guarantees than the original design.</p>
+
+        <p><em>Built for DecisionSpaak Technologies — happy to walk through architecture decisions and trade-offs in an interview.</em></p>
+
+        <ul class="actions">
+            <li><a href="index.html" class="button">Back to Portfolio</a></li>
+        </ul>
+    </div>
+</div>
