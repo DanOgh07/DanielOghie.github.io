@@ -1,32 +1,93 @@
-<div id="main">
-    <div class="inner">
-        <h1>Upora Data Engineering Pipeline</h1>
+<html>
+	<head>
+		<title>Upora Data Engineering Pipeline — Daniel Oghie</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
 
-        <span class="image main"><img src="images/upora_pipeline_architecture.png" alt="" /></span>
+		<!-- Wrapper -->
+			<div id="wrapper" class="fade-in">
 
-        <p><strong>Role:</strong> Data Engineer — designed and built the full pipeline</p>
+				<!-- Header -->
+					<header id="header">
+						<a href="https://docs.google.com/document/d/1OUOPZu-XkZXQGstMJC_U9Qnfhp_ENodJlDPsj8udXjI/edit?usp=sharing" class="logo">My Résumé</a>
+						<nav id="nav">
+							<ul>
+								<li><a href="index.html">Home</a></li>
+								<li><a href="personal-projects.html">Personal Projects</a></li>
+								<li><a href="work-projects.html">Work Projects</a></li>
+							</ul>
+						</nav>
+					</header>
 
-        <h3>Context</h3>
-        <p>Upora is a career-intelligence product for Nigerians targeting UK/US/Africa job markets, offering skill-gap analysis between current and target roles with course recommendations. It needed a reliable, low-cost pipeline to ingest and unify job and course data at scale.</p>
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>Upora Data Engineering Pipeline</h1>
 
-        <h3>Approach</h3>
-        <ul>
-            <li>Designed the pipeline around Medallion architecture (Bronze → Silver → Gold), separating raw ingestion, cleaning/unification, and aggregation</li>
-            <li>Built extract/transform logic across four job sources (Reed, Muse, Ashby, Greenhouse) and one course source (Coursera), including concurrent-worker scraping for course difficulty/duration enrichment</li>
-            <li>Migrated the full pipeline off AWS to a self-managed VPS — cron scheduling, self-managed PostgreSQL, local disk storage — cutting infrastructure cost with a documented risk trade-off</li>
-            <li>Diagnosed and fixed subtle data-integrity bugs, including a timestamp field that was silently overwriting on every run instead of only on real changes</li>
-        </ul>
+							<span class="image main"><img src="images/upora_pipeline_architecture.png" alt="" /></span>
 
-        <h3>Tech Stack</h3>
-        <p><code>Python</code> · <code>PostgreSQL</code> · <code>Cron</code> · <code>Sentence-Transformers</code> · <code>Linux/VPS</code></p>
+							<p><strong>Role:</strong> Data Engineer — designed and built the full pipeline</p>
 
-        <h3>Outcome</h3>
-        <p>Fully cost-optimised, self-hosted pipeline replacing a cloud-dependent architecture, with stronger data integrity guarantees than the original design.</p>
+							<h3>Context</h3>
+							<p>Upora is a career-intelligence product for Nigerians targeting UK/US/Africa job markets, offering skill-gap analysis between current and target roles with course recommendations. It needed a reliable, low-cost pipeline to ingest and unify job and course data at scale.</p>
 
-        <p><em>Built for DecisionSpaak Technologies — happy to walk through architecture decisions and trade-offs in an interview.</em></p>
+							<h3>Approach</h3>
+							<ul>
+								<li>Designed the pipeline around Medallion architecture (Bronze → Silver → Gold), separating raw ingestion, cleaning/unification, and aggregation</li>
+								<li>Built extract/transform logic across four job sources (Reed, Muse, Ashby, Greenhouse) and one course source (Coursera), including concurrent-worker scraping for course difficulty/duration enrichment</li>
+								<li>Migrated the full pipeline off AWS to a self-managed VPS — cron scheduling, self-managed PostgreSQL, local disk storage — cutting infrastructure cost with a documented risk trade-off</li>
+								<li>Diagnosed and fixed subtle data-integrity bugs, including a timestamp field that was silently overwriting on every run instead of only on real changes</li>
+							</ul>
 
-        <ul class="actions">
-            <li><a href="index.html" class="button">Back to Portfolio</a></li>
-        </ul>
-    </div>
-</div>
+							<h3>Tech Stack</h3>
+							<p><code>Python</code> · <code>PostgreSQL</code> · <code>Cron</code> · <code>Sentence-Transformers</code> · <code>Linux/VPS</code></p>
+
+							<h3>Outcome</h3>
+							<p>Fully cost-optimised, self-hosted pipeline replacing a cloud-dependent architecture, with stronger data integrity guarantees than the original design.</p>
+
+							<p><em>Built for DecisionSpaak Technologies — happy to walk through architecture decisions and trade-offs in an interview.</em></p>
+
+							<ul class="actions">
+								<li><a href="work-projects.html" class="button">Back to Work Projects</a></li>
+							</ul>
+						</div>
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<section>
+							<h2>Address</h2>
+							<p>Mowe, Ogun State, Nigeria</p>
+						</section>
+						<section>
+							<h2>Phone</h2>
+							<p><a href="tel:+2349128714965">+2349128714965</a></p>
+						</section>
+						<section>
+							<h2>Email</h2>
+							<p><a href="mailto:danieloghie@gmail.com">danieloghie@gmail.com</a></p>
+						</section>
+						<section>
+							<h2>Social</h2>
+							<ul class="icons">
+								<li><a href="https://www.linkedin.com/in/daniel-oghie" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+								<li><a href="https://github.com/DanOgh07" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+							</ul>
+						</section>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
